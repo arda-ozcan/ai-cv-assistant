@@ -1,0 +1,111 @@
+[
+  {
+  "name": "AI-Assisted Interactive CV Platform",
+  "role": "Full-Stack Developer & AI Engineer",
+  "tech_stack": [
+    "HTML",
+    "CSS",
+    "Bootstrap",
+    "JavaScript",
+    "FastAPI",
+    "Python",
+    "OpenAI API",
+    "JSONL Logging",
+    "Session Management",
+    "Geolocation API"
+  ],
+  "description": "Kişisel CV ve proje bilgilerimi yapay zekâ destekli bir sohbet arayüzü üzerinden sunan interaktif bir platform. Ziyaretçiler sitede benimle ilgili sorular sorabiliyor, sistem CV + projeler + profil verilerini kullanarak kişiselleştirilmiş ve bağlamlı yanıtlar üretiyor.",
+  "highlights": [
+    "FastAPI tabanlı backend ile OpenAI Chat Completions API entegrasyonu",
+    "Tamamen custom tasarlanmış, Apple tarzında minimal ve profesyonel frontend arayüzü",
+    "Mesaj alanı taştığında devreye giren blur arka planlı 'odak modu' (focus mode) kart tasarımı",
+    "Her ziyaretçi için unique session_id üretimi ve sohbet geçmişinin bu oturum üzerinden takip edilmesi",
+    "Konum izni isteme ve izin verilirse geolocation verisinin backend'e loglanması, verilmezse ❌ işareti ile işlenmesi",
+    "Chat ve konum verilerinin JSONL formatında loglanması ve bunların özel bir admin panelinden filtrelenip incelenebilmesi",
+    "Admin panelinde tarih, IP, session_id filtresi; her mesajda saat ve konum bilgisinin gösterimi",
+    "Logları CSV / JSON formatında export edebilme",
+    "profile.md ve projects.json üzerinden, RAG-benzeri bir yaklaşımla LLM'e Arda hakkında zengin bağlam sağlanması"
+  ],
+  "architecture": {
+    "frontend": "Statik HTML + CSS + JavaScript ile, tek sayfalık (SPA benzeri) bir arayüz. Mesaj listesi, typing indicator, quick action butonları ve focus mode için CSS animasyonları kullanılıyor. Browser'da localStorage ile session_id yönetimi yapılıyor ve her istekle backend'e gönderiliyor.",
+    "backend": "Python + FastAPI tabanlı REST API. /chat endpoint'i, gelen message + history + system + profile + projects içeriğini OpenAI Chat Completions API'ine iletip cevabı JSON olarak dönüyor. CORS ayarları ile frontend'den gelen istekler güvenli şekilde kabul ediliyor.",
+    "data_layer": "System prompt, profil bilgileri (profile.md) ve projeler (projects.json) dosya sistemi üzerinden okunarak LLM'e 'system' context'i olarak sağlanıyor. Sohbet logları ve konum verileri kullanıcının home dizininde .arda_cv_logs altında JSONL satırları olarak saklanıyor.",
+    "observability": "/admin/logs endpoint'i üzerinden, tarih / IP / session filtresi yapılabilen bir mini admin panel var. Burada her kullanıcı ve asistan mesajı baloncuk olarak gösteriliyor; her balonun altında saat + konum (📍 veya ❌) bilgisi yer alıyor. Aynı sayfadan CSV ve JSON export imkânı sunuluyor.",
+    "deployment": "Geliştirme ortamında uvicorn ile lokal çalışıyor. Üretim ortamında Nginx benzeri bir proxy arkasında FastAPI backend ve ayrı bir hosting (örn. Hostinger) üzerinde frontend dosyaları servis edilecek şekilde tasarlandı. Backend, API anahtarı ve ayarları için .env tabanlı konfigürasyon sistemi kullanıyor."
+  },
+  "github": "https://github.com/arda-ozcan/ai-interactive-cv", 
+  "live_demo": "https://onurardaozcan.com/asistan"
+},
+
+  
+  {
+    "name": "Formül Girişim – Ticari Web Platformu",
+    "role": "Full-Stack Web Developer",
+    "tech_stack": ["HTML", "CSS", "Bootstrap", "JavaScript", "PHP", "MySQL"],
+    "description": "Girişimcilik ve eğitim odaklı bir kurum için modern, yönetilebilir ve hızlı bir web platformu geliştirdim. İçerisinde dinamik sayfalar, admin paneli, içerik yönetim sistemi ve kullanıcı etkileşim modülleri bulunmaktadır.",
+    "highlights": [
+      "Tamamen bana ait özel geliştirilmiş admin paneli",
+      "Bootstrap ile %100 responsive tasarım",
+      "Performans odaklı PHP + MySQL backend",
+      "SEO uyumlu landing page ve içerik sayfaları",
+      "Gerçek müşteri kullanımı, yayında aktif bir proje"
+    ],
+    "github": null,
+    "live_demo": "https://formulgirisim.com/"
+  },
+  {
+    "name": "Cimnastik Akademisi – Spor Kulübü Web Sitesi",
+    "role": "Full-Stack Web Developer",
+    "tech_stack": ["HTML", "CSS", "Bootstrap", "JavaScript", "PHP"],
+    "description": "Bir spor akademisi için kurumsal tanıtım, iletişim ve program bilgilerini içeren, mobil uyumlu profesyonel bir web sitesi geliştirdim.",
+    "highlights": [
+      "Tamamen sana ait UI/UX tasarımı",
+      "Kolay yönetilebilir modüler yapı",
+      "Hızlı yüklenen optimize görseller",
+      "Müşteri odaklı temiz arayüz"
+    ],
+    "live_demo": "https://cimnastikakademisi.com/",
+    "github": null
+  },
+  {
+    "name": "Kişisel Portföy – Onur Arda Özcan",
+    "role": "Full-Stack Web Developer",
+    "tech_stack": ["HTML", "CSS", "Bootstrap", "JavaScript"],
+    "description": "Kendi profesyonel portföyüm; projelerimi, geçmiş deneyimlerimi ve eğitim içeriklerimi sergilediğim kişisel web sitem.",
+    "highlights": [
+      "Özenle tasarlanmış modern portföy UI",
+      "Projeler için özel tasarlanmış vitrin sayfası",
+      "Hız ve SEO optimizasyonu",
+      "Kişisel marka yönetimi için güçlü içerik yapısı"
+    ],
+    "live_demo": "https://onurardaozcan.com/",
+    "github": "https://github.com/arda-ozcan"
+  },
+  {
+    "name": "Kişisel Portföy – Proje Arşivi",
+    "role": "Full-Stack Web Developer",
+    "tech_stack": ["HTML", "CSS", "JavaScript", "Bootstrap"],
+    "description": "Gerçek müşterilere veya eğitim amaçlı geliştirdiğim 15+ web projesinin bir arşivi.",
+    "highlights": [
+      "Frontend ve backend projelerinin derli toplu sunumu",
+      "Her projeye ait açıklama, teknik bilgiler ve ekran görüntüleri",
+      "Ziyaretçiye hızlı fikir veren profesyonel proje vitrin yapısı"
+    ],
+    "live_demo": "https://onurardaozcan.com/projelerim",
+    "github": null
+  },
+  {
+    "name": "Teknofest 2023 – Otonom Arama Kurtarma Robotu",
+    "role": "Takım Lideri • Yazılım & Donanım",
+    "tech_stack": ["Python", "OpenCV", "Arduino", "Akıllı Sensörler", "Robotik Sistemler"],
+    "description": "Teknofest 2023 için geliştirilen, otonom nesne tespiti ve görev tamamlama üzerine çalışan robot takımının liderliğini üstlendim. Hem yazılım hem donanım süreçlerinde aktif rol aldım.",
+    "highlights": [
+      "Takım liderliği ve proje yönetimi",
+      "Otonom görüntü işleme (OpenCV)",
+      "Sensör kontrollü robotik sistem geliştirme",
+      "Yarışma seviyesinde mühendislik çözümü"
+    ],
+    "live_demo": "https://www.youtube.com/watch?v=9UrT0i0SHXU",
+    "github": null
+  }
+]

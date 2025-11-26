@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Arda AI Assistant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="shell">
+
+        <!-- Focus mode arka planı -->
+        <div class="focus-backdrop"></div>
+
+        <!-- Üst mini header -->
+        <header class="site-header animate-up">
+            <div class="brand">
+                <div class="brand-avatar">
+                    <img src="openAI.webp" alt="Arda Özcan">
+                </div>
+                <div class="brand-text">
+                    <span class="brand-name">Onur Arda Özcan</span>
+                    <span class="brand-sub">Web Developer & Software Instructor</span>
+                </div>
+            </div>
+            <div class="brand-tag">
+                <span class="pill pill-soft">Interactive CV</span>
+            </div>
+        </header>
+
+        <!-- Ana layout -->
+        <main class="layout">
+            <!-- Sol panel: intro / bilgiler -->
+            <section class="intro-panel animate-up animate-delay-1">
+                <div class="intro-content">
+                    <h1 class="intro-title">
+                        İş görüşmesine<br />
+                        AI asistanım ile başlayın.
+                    </h1>
+                    <p className="intro-lead">
+                        Bu sayfa, geleneksel CV’nin ötesine geçip benim hakkında
+                        aklınızdaki soruları doğrudan yanıtlayan kişisel yapay zekâ
+                        asistanınımı içerir. Teknik yetkinliklerim, projelerim ve çalışma
+                        tarzım hakkında 7/24 soru sorabilirsiniz.
+                    </p>
+
+                    <div class="intro-badges">
+                        <div class="pill pill-location" tabindex="0">
+                            📍 Antalya &amp; İstanbul &amp; ...
+                            <span class="pill-caret">▾</span>
+
+                            <div class="tooltip-card">
+                                <p class="tooltip-title">Lokasyonlar</p>
+                                <p class="tooltip-text">
+                                    Antalya · İstanbul · Kocaeli · Ankara
+                                </p>
+                                <!-- <p class="tooltip-note">
+                                    Fiziksel ofis veya hibrit roller için bu şehirlerde
+                                    çalışabilirim. Tam uzaktan (remote) pozisyonlara da açığım.
+                                </p> -->
+                            </div>
+                        </div>
+
+                        <span class="pill">🎯 Hedef: Web Developer / DevOps</span>
+                        <span class="pill">👨‍🏫 Deneyim: Yazılım &amp; Freelance &amp; STEM Eğitimi </span>
+                    </div>
+
+
+                    <div class="intro-stats">
+                        <div class="stat-card">
+                            <span class="stat-label">Eğitim verdiği yaş grubu</span>
+                            <span class="stat-value">9–18+</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-label">Teknoloji alanları</span>
+                            <span class="stat-value">Web · Python · AI · Robotik Kodlama</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-label">Odak</span>
+                            <span class="stat-value">Öğrenilebilirlik &amp; otomasyon</span>
+                        </div>
+                    </div>
+
+                    <p class="intro-note">
+                        <strong>İpucu:</strong> Asistanıma pozisyonunuzu kısaca
+                        anlatırsanız, benim o role uygunluğumu teknik ve dürüst bir
+                        şekilde değerlendirebilir.
+                    </p>
+
+                    <!-- Yeni blok: istatistikler + dekor bar -->
+                    <div class="intro-bottom">
+                        <div class="intro-metrics">
+                            <div class="metric-card">
+                                <span class="metric-label">Deneyim</span>
+                                <span class="metric-value">2+ yıl</span>
+                                <span class="metric-footnote">Eğitim &amp; yazılım odaklı</span>
+                            </div>
+                            <div class="metric-card">
+                                <span class="metric-label">Öğrenci</span>
+                                <span class="metric-value">150+</span>
+                                <span class="metric-footnote">9–18 yaş ve yetişkin</span>
+                            </div>
+                            <div class="metric-card">
+                                <span class="metric-label">Proje</span>
+                                <span class="metric-value">40+</span>
+                                <span class="metric-footnote">Web · Python · Robotik · AI</span>
+                            </div>
+                        </div>
+
+                        <div class="intro-deco">
+                            <div class="deco-bar">
+                                <div class="deco-glow"></div>
+                            </div>
+                            <p class="deco-caption">
+                                Bu sayfa, klasik CV’nin yanında “canlı” bir ön izleme sunar.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Sağ panel: asıl chat kartı -->
+            <section class="chat-panel animate-up animate-delay-2">
+                <div class="card">
+                    <header class="card-header">
+                        <div class="card-header-main">
+                            <div class="avatar">
+                                <span>A</span>
+                            </div>
+                            <div class="header-text">
+                                <h2>Arda Assistant</h2>
+                                <p>Onur Arda Özcan’ın profesyonel yapay zeka asistanı</p>
+                            </div>
+                        </div>
+                        <div class="card-header-side">
+                            <div class="status-pill">
+                                <span class="status-dot"></span>
+                                <span class="status-text">Online</span>
+                            </div>
+                            <div class="header-links">
+                                <button type="button" class="header-link header-link-compact focus-exit-btn">
+                                    ← CV görünümü
+                                </button>
+                                <a href="https://github.com/arda-ozcan" target="_blank" class="header-link">GitHub</a>
+                                <a href="www.linkedin.com/in/onur-arda-özcan" target="_blank" class="header-link">LinkedIn</a>
+                            </div>
+                        </div>
+                    </header>
+
+                    <main class="card-body">
+                        <div id="messages" class="messages">
+                            <!-- Mesajlar JS ile gelecek -->
+                        </div>
+
+                        <!-- Esneyecek Alan -->
+                        <!-- <div class="chat-spacer"></div> -->
+
+                        <div class="quick-actions">
+                            <span class="quick-label">Önerilen sorular:</span>
+                            <div class="quick-buttons">
+                                <button type="button" class="quick-btn" data-text="Arda kimdir?">
+                                    Arda kimdir?
+                                </button>
+                                <button type="button" class="quick-btn"
+                                    data-text="Teknik yetkinliklerini anlatır mısın?">
+                                    Teknik yetkinlikler
+                                </button>
+                                <button type="button" class="quick-btn"
+                                    data-text="Projelerinden birkaç örnek verebilir misin?">
+                                    Projeleri göster
+                                </button>
+                                <button type="button" class="quick-btn"
+                                    data-text="Şu pozisyona uygun mu? (Pozisyonu kısaca tarif et.)">
+                                    Bu pozisyona uygun mu?
+                                </button>
+                            </div>
+                        </div>
+                    </main>
+
+                    <footer class="card-footer">
+                        <form id="chat-form" class="input-row">
+                            <textarea id="chat-input" rows="1" placeholder="Arda hakkında ne öğrenmek istersiniz?"
+                                autocomplete="off"></textarea>
+                            <button type="submit" class="send-btn">
+                                Gönder
+                            </button>
+                        </form>
+                        <p class="disclaimer">
+                            Yanıtlar, Arda’nın sağladığı bilgiler ve OpenAI API üzerinden
+                            çalışan yapay zeka modeli kullanılarak üretilir. Değerlendirme
+                            için nihai karar size aittir.
+                        </p>
+                    </footer>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <span>© <span id="year"></span> Onur Arda Özcan · Interactive CV</span>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
