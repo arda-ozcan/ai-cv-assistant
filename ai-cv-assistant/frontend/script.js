@@ -1,5 +1,5 @@
 // Backend URL – lokal geliştirmede:
-const BACKEND_URL = "http://localhost:8000/chat";
+const BACKEND_URL = "https://ai-cv-assistant-9niq.onrender.com";
 
 // Her kullanıcı için benzersiz session id (localStorage’da saklıyoruz)
 let sessionId = localStorage.getItem("ardaAssistantSessionId");
@@ -313,5 +313,6 @@ function maybeEnterFocusModeOnOverflow() {
         enterFocusMode();
     }
 }
+
 
 
